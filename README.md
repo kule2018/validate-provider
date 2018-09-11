@@ -8,7 +8,7 @@
 * 验证函数中抛出异常, 则验证失败, 并将异常`error.message`作为验证失败消息
 * 验证函数可以是`Promise`方法
 
-## INstall ANd Usega
+## Install And Usega
 
 Using Browser:
 
