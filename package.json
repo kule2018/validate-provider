@@ -1,6 +1,6 @@
 {
   "name": "@validate/validate-provider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "XueYou",
   "typings": "dist/index.d.ts",
   "description": "验证提供方",
@@ -12,7 +12,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production rollup -c",
     "test": "jest",
-    "_publish": "npm run test && npm publish"
+    "_publish": "npm run test && npm run build && npm publish"
   },
   "keywords": [
     "validate"
