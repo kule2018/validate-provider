@@ -1,6 +1,6 @@
 {
   "name": "@validate/validate-provider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "XueYou",
   "typings": "dist/index.d.ts",
   "description": "验证提供方",

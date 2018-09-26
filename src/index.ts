@@ -32,7 +32,7 @@ export interface IMethodInfo<TValue = {}> extends IMethodRegister {
   /**
    * promise化验证函数
    */
-  method: (value: TValue, ...params: any[]) => Promise<boolean>;
+  method: (value: TValue, ...params: any[]) => Promise<IMethodRegister>;
 }
 
 /**
@@ -185,7 +185,7 @@ export class ValidateProvider {
     return function (value: TValue, ...params: any[]) {
       var ctx = this;
       let args = [].slice.call(arguments, 0);
-      return new Promise<boolean>((resolve, reject) => {
+      return new Promise<IMethodRegister>((resolve, reject) => {
         // 验证失败异常
         let validError = new ValidateMethodError(
           value, 
@@ -197,12 +197,12 @@ export class ValidateProvider {
           // 执行验证函数
           const result = method.apply(ctx, args);
           if (result instanceof Promise) {
-            result.then(() => resolve(true)).catch((error) => {
+            result.then(() => resolve(methodRegister)).catch((error) => {
               validError.message = ValidateProvider.FormatMessage<TValue>(methodRegister, value, params, error.message);
               reject(validError);
             });
           } else if ((typeof result) === 'boolean') {
-            result === true ? resolve(true) : reject(validError);
+            result === true ? resolve(methodRegister) : reject(validError);
           } else if ((typeof result) === 'string') {
             validError.message = ValidateProvider.FormatMessage<TValue>(methodRegister, value, params, result);
             reject(validError);

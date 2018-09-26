@@ -10,7 +10,7 @@ test('add', (done) => {
 
   provider.get<string>('test').method('a')
     .then((a) => {
-      expect(a).toBeTruthy();
+      expect(a.name).toMatch('test');
       done();
     })
     .catch(error => {
@@ -32,7 +32,7 @@ test('addByMethodRegister', (done) => {
 
   provider.get<string>('test').method('a')
     .then((a) => {
-      expect(a).toBeTruthy();
+      expect(a.name).toMatch('test');
       done();
     })
     .catch(error => {
