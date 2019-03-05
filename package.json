@@ -1,5 +1,5 @@
 {
-    "name": "@validate/validate-provider",
+    "name": "validate-provider",
     "version": "1.0.3",
     "publisher": "XueYou",
     "typings": "es/index.d.ts",

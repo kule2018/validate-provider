@@ -13,7 +13,7 @@
 Using Browser:
 
 ```html
-<script src="./validate-provider.js"></script>
+<script src="./dist/index.lib.js"></script>
 <script>
     var provider = new ValidateProvider();
 
@@ -40,11 +40,11 @@ Using Browser:
 Or Using npm:
 
 ```sh
-npm install --save @validate/validate-provider
+npm install --save validate-provider
 ```
 
 ```js
-import { ValidateProvider } from "@validate/validate-provider";
+import { ValidateProvider } from "validate-provider";
 
 // 实例化验证提供方
 var provider = new ValidateProvider();
