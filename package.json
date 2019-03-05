@@ -2,14 +2,13 @@
     "name": "@validate/validate-provider",
     "version": "1.0.3",
     "publisher": "XueYou",
-    "typings": "dts/index.d.ts",
+    "typings": "es/index.d.ts",
     "description": "验证提供方",
     "main": "dist/index.lib.js",
     "module": "es/index.js",
     "files": [
         "es",
-        "dist",
-        "dts"
+        "dist"
     ],
     "scripts": {
         "test": "jest",
