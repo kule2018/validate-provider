@@ -14,7 +14,7 @@ export default {
         // 打包成浏览器或node能调用的
         file: "dist/index.lib.js",
         format: "umd",
-        name: "ValidateMethods",
+        name: "ValidateProvider",
         sourcemap: true
     },
     plugins: [
