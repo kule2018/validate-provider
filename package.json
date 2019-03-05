@@ -4,11 +4,11 @@
     "publisher": "XueYou",
     "typings": "dts/index.d.ts",
     "description": "验证提供方",
-    "main": "es/index.js",
+    "main": "dist/index.lib.js",
     "module": "es/index.js",
     "files": [
         "es",
-        "lib",
+        "dist",
         "dts"
     ],
     "scripts": {
