@@ -13,7 +13,7 @@
 Using Browser:
 
 ```html
-<script src="./dist/index.lib.js"></script>
+<script src="./dist/index.js"></script>
 <script>
     var provider = new ValidateProvider();
 

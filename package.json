@@ -1,21 +1,22 @@
 {
     "name": "validate-provider",
-    "version": "1.0.3",
-    "publisher": "XueYou",
-    "typings": "es/index.d.ts",
+    "version": "1.0.31",
     "description": "验证提供方",
-    "main": "dist/index.lib.js",
+    "publisher": "XueYou",
+    "typings": "typings/index.d.ts",
+    "main": "dist/index.js",
     "module": "es/index.js",
     "files": [
         "es",
-        "dist"
+        "dist",
+        "typings"
     ],
     "scripts": {
         "test": "jest",
         "coverage": "jest --coverage",
-        "build": "tsc && yarn run build:es && yarn run build:lib",
-        "build:es": "rollup --config rollup.config.es.js",
-        "build:lib": "rollup --config rollup.config.lib.js",
+        "build": "yarn run build:es && yarn run bundle",
+        "build:es": "tsc",
+        "bundle": "rollup -c",
         "_publish": "yarn run test && yarn run build && npm publish"
     },
     "keywords": [
@@ -31,13 +32,14 @@
     },
     "license": "MIT",
     "publishConfig": {
-        "registry": "http://m.bank-pay.com:8081/repository/npm-my/"
+        "registry": "http://192.168.1.22:8081/repository/npm-my/"
     },
     "devDependencies": {
         "@types/jest": "^24.0.6",
-        "jest": "^24.1.0",
         "coveralls": "^3.0.2",
+        "jest": "^24.1.0",
         "rollup": "^0.65.2",
+        "rollup-plugin-commonjs": "^9.2.1",
         "rollup-plugin-node-resolve": "^4.0.0",
         "rollup-plugin-progress": "^1.0.0",
         "rollup-plugin-typescript": "^1.0.0",
